@@ -6,14 +6,14 @@
 <title>Chanmajoti AB</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#f4f4f4;}
-header {background:white;padding:15px;text-align:center;}
-header img {max-width:200px;}
+body {margin:0;font-family:Arial;background:#f5f5f5;}
+header {background:white;text-align:center;padding:20px;}
+header img {max-width:180px;}
 
-nav {background:#7a007a;padding:12px;text-align:center;}
-nav a {color:white;margin:0 12px;text-decoration:none;font-weight:bold;cursor:pointer;}
+nav {background:#7a007a;padding:15px;text-align:center;}
+nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;cursor:pointer;}
 
-.section {display:none;padding:30px;max-width:1100px;margin:auto;}
+.section {display:none;padding:40px;max-width:1100px;margin:auto;}
 .active {display:block;}
 
 .hero {
@@ -21,53 +21,43 @@ background:linear-gradient(135deg,#7a007a,#d100d1);
 color:white;
 padding:80px 20px;
 text-align:center;
-border-radius:10px;
+border-radius:12px;
 }
-
 .hero h1 {font-size:32px;margin-bottom:10px;}
-.hero p {font-size:18px;margin-bottom:20px;}
+.hero p {font-size:18px;}
 
 .cta {
+margin-top:20px;
+display:inline-block;
 background:white;
 color:#7a007a;
-padding:12px 20px;
-border-radius:8px;
-text-decoration:none;
+padding:12px 25px;
+border-radius:30px;
 font-weight:bold;
-display:inline-block;
-margin-top:10px;
-}
-
-.about {
-margin-top:40px;
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
-text-align:center;
 }
 
 .services {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-margin-top:20px;
+margin-top:30px;
 }
 
 .card {
 background:white;
-padding:20px;
+padding:25px;
 border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
-font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 text-align:center;
 }
+
+.card h3 {margin-bottom:10px;}
 
 .contact-box {
 background:white;
 padding:25px;
 border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 max-width:600px;
 margin:auto;
 }
@@ -93,12 +83,23 @@ cursor:pointer;
 
 button:hover {background:#5a005a;}
 
+.success, .error {
+display:none;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+text-align:center;
+}
+
+.success {background:#d4edda;color:#155724;}
+.error {background:#f8d7da;color:#721c24;}
+
 footer {
 background:#222;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
+margin-top:40px;
 }
 </style>
 
@@ -108,7 +109,6 @@ document.querySelectorAll('.section').forEach(s => s.classList.remove('active'))
 document.getElementById(id).classList.add('active');
 }
 </script>
-
 </head>
 
 <body>
@@ -123,50 +123,75 @@ document.getElementById(id).classList.add('active');
 <a onclick="showSection('contact')">Kontakt</a>
 </nav>
 
-<!-- HEM -->
 <div id="home" class="section active">
 
 <div class="hero">
-<h1>Ekonomiska lösningar för ditt företag</h1>
-<p>Vi hjälper företag att växa med trygg ekonomi, rådgivning och smarta lösningar</p>
+<h1>Ekonomiska lösningar för företag</h1>
+<p>Vi hjälper ditt företag växa tryggt och effektivt</p>
 <a class="cta" onclick="showSection('contact')">Kontakta oss</a>
 </div>
 
-<div class="about">
-<h2>Om oss</h2>
-<p>
-Chanmajoti AB erbjuder professionella tjänster inom bokföring, rådgivning och konsultverksamhet. 
-Vi hjälper företag att spara tid, fatta bättre beslut och växa tryggt.
-</p>
+<div class="services">
+<div class="card">
+<h3>Bokföring</h3>
+<p>Vi hanterar din bokföring så du kan fokusera på verksamheten.</p>
+</div>
+
+<div class="card">
+<h3>Ekonomisk rådgivning</h3>
+<p>Strategisk rådgivning för bättre lönsamhet.</p>
+</div>
+
+<div class="card">
+<h3>Konsultverksamhet</h3>
+<p>Professionell hjälp inom ekonomi och administration.</p>
+</div>
 </div>
 
 </div>
 
-<!-- TJÄNSTER -->
 <div id="services" class="section">
 <h2>Våra tjänster</h2>
 
 <div class="services">
-<div class="card">Bokföring</div>
-<div class="card">Ekonomisk rådgivning</div>
-<div class="card">Konsultverksamhet</div>
-<div class="card">Arbetskraftsuthyrning</div>
-<div class="card">Fastighetsservice</div>
-<div class="card">Uthyrning</div>
+
+<div class="card">
+<h3>Bokföring</h3>
+<p>Löpande bokföring, bokslut och deklaration.</p>
+</div>
+
+<div class="card">
+<h3>Ekonomisk rådgivning</h3>
+<p>Hjälp att utveckla och optimera din ekonomi.</p>
+</div>
+
+<div class="card">
+<h3>Arbetskraftsuthyrning</h3>
+<p>Flexibla lösningar för personalbehov.</p>
+</div>
+
+<div class="card">
+<h3>Fastighetsservice</h3>
+<p>Professionell service för fastigheter.</p>
+</div>
+
+<div class="card">
+<h3>Uthyrning</h3>
+<p>Effektiva lösningar för uthyrning.</p>
 </div>
 
 </div>
+</div>
 
-<!-- KONTAKT -->
 <div id="contact" class="section">
 <h2>Kontakta oss</h2>
 
 <div class="contact-box">
 
-<p>📧 <a href="mailto:info@chanmajoti.se">info@chanmajoti.se</a></p>
-<p>📞 <a href="tel:0729205788">0729205788</a></p>
+<p>📧 info@chanmajoti.se</p>
+<p>📞 0729205788</p>
 
-<form action="https://formspree.io/f/mzdkkqad" method="POST">
+<form id="form" action="https://formspree.io/f/mzdkkqad" method="POST">
 
 <input type="text" name="name" placeholder="Ditt namn" required>
 <input type="email" name="email" placeholder="Din email" required>
@@ -176,12 +201,43 @@ Vi hjälper företag att spara tid, fatta bättre beslut och växa tryggt.
 
 </form>
 
+<div class="success" id="successMsg">✅ Meddelande skickat!</div>
+<div class="error" id="errorMsg">❌ Något gick fel</div>
+
 </div>
 </div>
 
 <footer>
 <p>© 2026 Chanmajoti AB</p>
 </footer>
+
+<script>
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async function(e) {
+e.preventDefault();
+
+document.getElementById("successMsg").style.display = "none";
+document.getElementById("errorMsg").style.display = "none";
+
+try {
+let response = await fetch(form.action, {
+method: "POST",
+body: new FormData(form),
+headers: { 'Accept': 'application/json' }
+});
+
+if (response.ok) {
+document.getElementById("successMsg").style.display = "block";
+form.reset();
+} else {
+document.getElementById("errorMsg").style.display = "block";
+}
+} catch {
+document.getElementById("errorMsg").style.display = "block";
+}
+});
+</script>
 
 </body>
 </html>
