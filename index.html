@@ -7,6 +7,7 @@
 
 <style>
 body {margin:0;font-family:Arial;background:#f5f5f5;}
+
 header {background:white;text-align:center;padding:20px;}
 header img {max-width:180px;}
 
@@ -16,15 +17,32 @@ nav a {color:white;margin:0 15px;text-decoration:none;font-weight:bold;cursor:po
 .section {display:none;padding:40px;max-width:1100px;margin:auto;}
 .active {display:block;}
 
+/* HERO MED DIN BILD */
 .hero {
-background:linear-gradient(135deg,#7a007a,#d100d1);
+background: url("B7A5618D-DF2E-4E77-98A3-5726BB3162E1.png") no-repeat center center/cover;
 color:white;
-padding:80px 20px;
+padding:120px 20px;
 text-align:center;
-border-radius:12px;
+position: relative;
 }
-.hero h1 {font-size:32px;margin-bottom:10px;}
-.hero p {font-size:18px;}
+
+.hero::before {
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+.hero h1, .hero p, .cta {
+position:relative;
+z-index:2;
+}
+
+.hero h1 {font-size:36px;margin-bottom:10px;}
+.hero p {font-size:20px;}
 
 .cta {
 margin-top:20px;
@@ -132,8 +150,8 @@ document.getElementById(id).classList.add('active');
 <div id="home" class="section active">
 
 <div class="hero">
-<h1>Ekonomiska lösningar för företag</h1>
-<p>Vi hjälper ditt företag växa tryggt och effektivt</p>
+<h1>Chanmajoti AB</h1>
+<p>Ekonomiska lösningar för företag</p>
 <div class="cta" onclick="showSection('contact')">Kontakta oss</div>
 </div>
 
