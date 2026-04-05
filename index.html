@@ -19,9 +19,32 @@ nav a {color:white;margin:0 12px;text-decoration:none;font-weight:bold;cursor:po
 .hero {
 background:linear-gradient(135deg,#7a007a,#d100d1);
 color:white;
-padding:70px;
+padding:80px 20px;
 text-align:center;
 border-radius:10px;
+}
+
+.hero h1 {font-size:32px;margin-bottom:10px;}
+.hero p {font-size:18px;margin-bottom:20px;}
+
+.cta {
+background:white;
+color:#7a007a;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-top:10px;
+}
+
+.about {
+margin-top:40px;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+text-align:center;
 }
 
 .services {
@@ -102,15 +125,27 @@ document.getElementById(id).classList.add('active');
 
 <!-- HEM -->
 <div id="home" class="section active">
+
 <div class="hero">
 <h1>Ekonomiska lösningar för ditt företag</h1>
-<p>Vi hjälper dig att växa tryggt och effektivt</p>
+<p>Vi hjälper företag att växa med trygg ekonomi, rådgivning och smarta lösningar</p>
+<a class="cta" onclick="showSection('contact')">Kontakta oss</a>
 </div>
+
+<div class="about">
+<h2>Om oss</h2>
+<p>
+Chanmajoti AB erbjuder professionella tjänster inom bokföring, rådgivning och konsultverksamhet. 
+Vi hjälper företag att spara tid, fatta bättre beslut och växa tryggt.
+</p>
+</div>
+
 </div>
 
 <!-- TJÄNSTER -->
 <div id="services" class="section">
 <h2>Våra tjänster</h2>
+
 <div class="services">
 <div class="card">Bokföring</div>
 <div class="card">Ekonomisk rådgivning</div>
@@ -119,6 +154,7 @@ document.getElementById(id).classList.add('active');
 <div class="card">Fastighetsservice</div>
 <div class="card">Uthyrning</div>
 </div>
+
 </div>
 
 <!-- KONTAKT -->
@@ -133,9 +169,7 @@ document.getElementById(id).classList.add('active');
 <form action="https://formspree.io/f/mzdkkqad" method="POST">
 
 <input type="text" name="name" placeholder="Ditt namn" required>
-
 <input type="email" name="email" placeholder="Din email" required>
-
 <textarea name="message" placeholder="Skriv ditt meddelande..." required></textarea>
 
 <button type="submit">Skicka meddelande</button>
